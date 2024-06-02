@@ -14,15 +14,18 @@ package poly;
 
     class Dog extends Animal {
         @Override
-        Dog getAnimal() {
-            System.out.println("dog class ");
-            return this;
-        }
+//        Dog getAnimal() {
+//            System.out.println("dog class ");
+//            return this;
+//        }
 //        Animal getAnimal(){
 //            System.out.println("dog class ");
 //            return this;
 //        }
-
+Animal getAnimal(){
+    System.out.println("animal class use in dog");
+            return new Dog();
+}
         void display() {
             System.out.println("I am a dog");
         }
@@ -38,8 +41,8 @@ package poly;
 
             Animal ad = a.getAnimal();
             ad.display();
-            Dog ad1=d.getAnimal();
-            ad1.display();// This will call the display method in Dog class
+//           Animal ob1=new
+//            ad1.display();// This will call the display method in Dog class
         }
 
 }
