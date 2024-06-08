@@ -22,8 +22,7 @@ public class data implements Comparable<data> {
     }
 
     public void setKey(String key) {
-        this.key = key;
-    }
+        this.key = key;    }
 
     public int getNum() {
         return num;
