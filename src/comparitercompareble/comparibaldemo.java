@@ -1,9 +1,8 @@
 package comparitercompareble;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+
+import java.util.*;
+import java.util.logging.Handler;
 
 public class comparibaldemo {
     public static void main(String[] args) {
@@ -17,7 +16,9 @@ public class comparibaldemo {
 //        Collections.sort(list);
         Collections.sort(list,new compitaldemo());
         System.out.println(list);
-        ArrayList<dataofemp> list2_name=new ArrayList<>(list);
-        Collections.sort(list2_name,new coparitar_name121());
-        System.out.println(list2_name);
+        HashMap<String,Integer>listnew=new HashMap<>();
+//        ArrayList<dataofemp> list2_name1=new ArrayList<>(listnew.entrySet());
+//        List<Map.Entry<String, Integer>> list = new ArrayList<>(listnew.entrySet());
+//        Collections.sort(list2_name,new coparitar_name121());
+//        System.out.println(list2_name);
     }}
