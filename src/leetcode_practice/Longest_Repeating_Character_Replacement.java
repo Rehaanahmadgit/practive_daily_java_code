@@ -2,23 +2,22 @@ package leetcode_practice;
 
 public class Longest_Repeating_Character_Replacement {
     static int ans(String name,int k){
-        int left=0;
-        int k1=k;
-        int max=0;
-       char[]ch=name.toCharArray();
-        for (int rigth=0;rigth<name.length();rigth++){
-            if (ch[left]!=ch[rigth]){
-               k1--;
-               max=Math.max(max,left-rigth+1);
-               if (k1==0){
-                   k1=k;
-                   left++;
-               }
+      int right=0;
+      int max=0;
+      for (int left=0;left<name.length();left++){
+          while (left<right&&k!=0){
+            if (!(name.charAt(left) ==name.charAt(right))){
+                k--;
+                right++;
+                max=Math.max(max,left-right+1);
             }else {
-
-                max=Math.max(max,left-rigth+1);
+              right++;
+              max=Math.max(max,left-right+1);
             }
-        }
+          }
+          right=left;
+      }
+
         return max;
     }
     public static void main(String[] args) {
